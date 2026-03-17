@@ -5,11 +5,20 @@ body {
 /* === Header & Navbar === */
 header {
   max-width: 100vw;
-  max-height: 350px;
+  height: 150px;
   background-image: url(./Images/kalhh-whiskey-230891_1920.jpg);
 }
 
 .navbar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-link{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -19,28 +28,18 @@ header {
   margin: 8px;
 }
 
-.bg-Whisky {
-  z-index: -1;
-  position: fixed;
-  width: 100%;
-  height: auto;
+.navbar-link a:hover{
+  background-color: chocolate;
+}
+
+.navbar-link a{
+  margin-right: 16px;  
 }
 
 .navbar h1,
 a {
-  font-size: 20px;
+  font-size: 32px;
   color: beige;
-}
-
-.navbar-img {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar-img img {
-  width: 300px;
 }
 
 /* === Main (Produkte) === */
