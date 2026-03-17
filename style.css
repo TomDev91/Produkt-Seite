@@ -48,6 +48,18 @@ a {
 main {
   max-width: 100vw;
   min-height: none;
+  margin: 8px;
+}
+
+main h1,
+main h2{
+  color: chocolate;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+main article:hover{
+  background-color: chocolate;
+  transition: 2s
 }
 
 .Produkte-auswahl {
