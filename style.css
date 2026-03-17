@@ -1,152 +1,160 @@
 body {
-    background-color: beige;
+  background-color: beige;
 }
 
 /* === Header & Navbar === */
 header {
-    max-width: 100vw;
-    max-height: 350px;
-    background-image: url(./Images/kalhh-whiskey-230891_1920.jpg);
+  max-width: 100vw;
+  max-height: 350px;
+  background-image: url(./Images/kalhh-whiskey-230891_1920.jpg);
 }
 
 .navbar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    margin: 8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
 }
 
 .bg-Whisky {
-    z-index: -1;
-    position: fixed;
-    width: 100%;
-    height: auto;
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: auto;
 }
 
 .navbar h1,
 a {
-    font-size: 20px;
-    color: beige;
+  font-size: 20px;
+  color: beige;
 }
 
 .navbar-img {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-img img {
-    width: 300px;
+  width: 300px;
 }
 
 /* === Main (Produkte) === */
 
 main {
-    max-width: 100vw;
-    min-height: none;
+  max-width: 100vw;
+  min-height: none;
 }
 
 .Produkte-auswahl {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 10px;
 }
 
-.Produkte{
-    width: 350px;
-    margin: 50px;
+.Produkte {
+  width: 350px;
+  margin: 50px;
 }
 
-.Produkte article{
-    background-color: grey;
-    color: beige;
-    padding:10px;
+.Produkte article {
+  background-color: grey;
+  color: beige;
+  padding: 10px;
 }
 
 .Produkte img {
-    width: 350px;
+  width: 350px;
 }
 
-.Preis{
-    margin-top: 20px;
-    padding: 10px;
-    background-color: grey;
-    color:beige;
-    width:fit-content;
-    font-weight:bold;    
+.Preis {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: grey;
+  color: beige;
+  width: fit-content;
+  font-weight: bold;
 }
 
-.Preis:hover{
-    background-color:chocolate;
-    color: beige;
-    transition: 2s;
+.Preis:hover {
+  background-color: chocolate;
+  color: beige;
+  transition: 2s;
 }
 
 /* === Sonstiges === */
 
-.container-sonstiges{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 200px;
+.container-sonstiges {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
 }
 
-
-
-.whisky-tasing{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content:flex-start;
-    align-items: flex-start;
-    padding:50px;
+.container-sonstiges h1{
+    padding: 10px;
+    margin: 10px;
 }
 
-.whisky-tasing-description{
-    display: inline;
-    max-width: 35vw;
+.container-sonstiges hr{
+    height: 3px;
+    background-color: black;
 }
 
-.whisky-tasing-description article{
-    background-color: grey;
-    color: beige;
+.whisky-tasing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 50px;
 }
 
-.whisky-tasting-img img{
-    width: 350px;
-    height: auto;
-    margin-inline-start: 200px;
+.whisky-tasing-description {
+  display: inline;
+  max-width: 35vw;
 }
 
-.whisky-tasing-description ul{
-    background-color: grey;
-    color: beige;
-    width: max-content;
-    padding: 5px;
-    list-style-type: none;
+.whisky-tasing-description article {
+  background-color: grey;
+  color: beige;
 }
 
-.Termine-Liste{
-    display: flex;
-    flex-direction: row;
+.whisky-tasting-img img {
+  width: 350px;
+  height: auto;
+  margin-inline-start: 200px;
+}
+
+.whisky-tasing-description ul {
+  background-color: grey;
+  color: beige;
+  width: max-content;
+  padding: 5px;
+  list-style-type: none;
+}
+
+.Termine-Liste {
+  display: flex;
+  flex-direction: row;
 }
 
 /* === Footer === */
 
 footer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 footer a {
-    color: black;
-    margin: 10px;
+  color: black;
+  margin: 10px;
 }
