@@ -99,6 +99,29 @@ main article:hover{
   transition: 2s;
 }
 
+.preis-kauf{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: flex-end;
+}
+
+.preis-kauf button{
+  margin-left: 16px;
+  padding: 10px;
+  height: fit-content;
+  border-radius: 8px;
+  border: none;
+  background-color: grey;
+  color: beige;
+}
+
+.preis-kauf button:hover{
+  background-color: chocolate;
+  transition: 2s;
+}
+
 /* === Sonstiges === */
 
 .container-sonstiges {
@@ -168,4 +191,5 @@ footer {
 footer a {
   color: black;
   margin: 10px;
+  font-size: 16px;
 }
