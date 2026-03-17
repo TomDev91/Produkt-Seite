@@ -18,7 +18,7 @@ header {
   justify-content: center;
 }
 
-.navbar-link{
+.navbar-link {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -28,12 +28,12 @@ header {
   margin: 8px;
 }
 
-.navbar-link a:hover{
+.navbar-link a:hover {
   background-color: chocolate;
 }
 
-.navbar-link a{
-  margin-right: 16px;  
+.navbar-link a {
+  margin-right: 16px;
 }
 
 .navbar h1,
@@ -50,14 +50,14 @@ main {
 }
 
 main h1,
-main h2{
+main h2 {
   color: chocolate;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
-main p:hover{
+main p:hover {
   background-color: chocolate;
-  transition: 2s
+  transition: 2s;
 }
 
 .Produkte-auswahl {
@@ -98,15 +98,15 @@ main p:hover{
   transition: 2s;
 }
 
-.preis-kauf{
+.preis-kauf {
   display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content:flex-start;
-    align-items: baseline;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
 }
 
-.preis-kauf button{
+.preis-kauf button {
   margin-left: 16px;
   padding: 10px;
   height: fit-content;
@@ -116,7 +116,7 @@ main p:hover{
   color: beige;
 }
 
-.preis-kauf button:hover{
+.preis-kauf button:hover {
   background-color: chocolate;
   transition: 2s;
 }
@@ -129,14 +129,14 @@ main p:hover{
   margin-bottom: 200px;
 }
 
-.container-sonstiges h1{
-    padding: 10px;
-    margin: 10px;
+.container-sonstiges h1 {
+  padding: 10px;
+  margin: 10px;
 }
 
-.container-sonstiges hr{
-    height: 3px;
-    background-color: black;
+.container-sonstiges hr {
+  height: 3px;
+  background-color: black;
 }
 
 .whisky-tasing {
@@ -179,8 +179,9 @@ main p:hover{
   font-size: 24px;
 }
 
-.Termine-Liste a{
-    color: beige;}
+.Termine-Liste a {
+  color: beige;
+}
 
 /* === Footer === */
 
@@ -195,4 +196,45 @@ footer a {
   color: black;
   margin: 10px;
   font-size: 16px;
+}
+
+/* === Responsiv Section === */
+
+@media (min-width: 1850px) {
+  .Produkte-auswahl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 1749px) {
+  .Produkte-auswahl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+}
+
+@media(max-width:1020px){
+  .whisky-tasting-img img{
+    margin-inline-start: 20px;
+  }
+}
+
+@media(max-width:750px){
+  .whisky-tasting-img img{
+    margin-inline-start: 0px;
+  }
+}
+
+@media(max-width:500px){
+  .navbar h1,
+  .navbar a{
+    font-size: 150%;
+  }
 }
