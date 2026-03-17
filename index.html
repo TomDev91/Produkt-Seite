@@ -10,6 +10,7 @@
       href="./Images/icons8-tumbler-g-96.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="./bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
@@ -84,7 +85,7 @@
       </section>
       <section class="container-sonstiges" id="Sonstiges">
         <h1>Sonstiges:</h1>
-        <hr>
+        <hr/>
         <div class="whisky-tasing">
           <div class="whisky-tasing-description">
             <h2>Whisky Verkostung</h2>
@@ -101,16 +102,52 @@
               <h2>Freie Termine:</h2>
               <div class="Termine-Liste">
                 <ul class="termine-datum">
-                  <li><a href="#">01.01.2027</a></li>
-                  <li><a href="#">01.04.2027</a></li>
-                  <li><a href="#">01.08.2027</a></li>
-                  <li><a href="#">01.12.2027</a></li>
+                  <li>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal_Termine"
+                    >
+                      01.01.2027
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal_Termine"
+                    >
+                      01.04.2027</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal_Termine"
+                    >
+                      01.08.2027</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal_Termine"
+                    >
+                      01.12.2027</a
+                    >
+                  </li>
                 </ul>
                 <ul class="termine-ort">
-                  <li><a href="#">Ratskeller Leipzig</a></li>
-                  <li><a href="#">Burg Trebsen</a></li>
-                  <li><a href="#">Delitzscher Markt</a></li>
-                  <li><a href="#">Taucha</a></li>
+                  <li><a href="#" data-bs-toggle="modal"
+                      data-bs-target="#modal_Orte">Ratskeller Leipzig</a></li>
+                  <li><a href="#" data-bs-toggle="modal"
+                      data-bs-target="#modal_Orte">Burg Trebsen</a></li>
+                  <li><a href="#" data-bs-toggle="modal"
+                      data-bs-target="#modal_Orte">Delitzscher Markt</a></li>
+                  <li><a href="#" data-bs-toggle="modal"
+                      data-bs-target="#modal_Orte">Taucha</a></li>
                 </ul>
               </div>
             </div>
@@ -122,6 +159,7 @@
             />
           </div>
         </div>
+        <hr/>
       </section>
     </main>
 
@@ -129,5 +167,91 @@
       <a href="#">Impressum</a>
       <a href="#">Kontakt</a>
     </footer>
+
+    <!-- Modal für Termine-->
+    <div
+      class="modal fade"
+      id="modal_Termine"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Termin Vergabe - Platzhalter
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Das hier ist ein Platzhalter für Termine.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Schließen
+            </button>
+            <!--
+            <button type="button" class="btn btn-primary">Understood</button>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal für Orte -->
+    <div
+      class="modal fade"
+      id="modal_Orte"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Verfügbare Orte - Platzhalter
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Das hier ist ein Platzhalter für die Orte der Verkostungen.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Schließen
+            </button>
+            <!--
+            <button type="button" class="btn btn-primary">Understood</button>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script src="./bootstrap.bundle.min.js"></script>
 </html>
