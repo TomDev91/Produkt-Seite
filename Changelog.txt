@@ -1,0 +1,31 @@
+Whisky Shop Changelog
+======================
+
+Version 1.2.0 - 04.09.2026
+---------------------------
+
+Design
+- Neues Premium-Design im Dark-Whisky-Stil umgesetzt.
+- Dunkle Farbpalette mit Creme- und Kupferakzenten eingeführt.
+- Neuer Hero-Bereich mit Hintergrundbild, Markenname und Call-to-Action ergänzt.
+- Navigation in Kollektion und Verkostungen umbenannt und übersichtlicher gestaltet.
+- Neue Typografie mit Playfair Display und DM Sans integriert.
+
+Produkte
+- Produktübersicht auf responsive CSS-Grid-Karten umgestellt.
+- Einheitliche Produktbilder und strukturierte Produktinformationen ergänzt.
+- Lorem-Ipsum-Texte durch individuelle Produktbeschreibungen ersetzt.
+- Produktkategorien, Nummerierungen und Preise übersichtlicher dargestellt.
+- Kaufen-Schaltflächen als Warenkorb-Aktionen gestaltet.
+- Dezente Hover- und Fokus-Effekte für Bilder und Schaltflächen ergänzt.
+
+Verkostungen
+- Verkostungsbereich visuell an das neue Premium-Design angepasst.
+- Beschreibungstext überarbeitet.
+- Terminliste übersichtlicher strukturiert.
+- Vorhandene Bootstrap-Modals optisch an die neue Farbwelt angepasst.
+
+Responsive Design
+- Darstellung für Desktop, Tablet und Smartphone überarbeitet.
+- Feste Breiten und starre Abstände durch flexible Layouts ersetzt.
+- Produktkarten auf kleineren Bildschirmen automatisch untereinander angeordnet.

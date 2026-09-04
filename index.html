@@ -15,99 +15,73 @@
   </head>
 
   <body>
-    <header>
+    <header class="site-header">
       <nav class="navbar">
-        <h1>Whisky-Produkte-Shop-Projekt</h1>
+        <a class="brand" href="#top" aria-label="Whisky Atelier Startseite">
+          <span class="brand-mark">W</span>
+          <span>Whisky Atelier</span>
+        </a>
         <div class="navbar-link">
-          <a href="#unsere_Produkte">Zu unseren Whiskys</a>
-          <a href="#Sonstiges">Sonstiges</a>
+          <a href="#unsere_Produkte">Kollektion</a>
+          <a href="#Sonstiges">Verkostungen</a>
         </div>
       </nav>
+      <div class="hero" id="top">
+        <p class="eyebrow">Ausgewählte Tropfen · Seit 2026</p>
+        <h1>Whisky mit<br /><em>Charakter.</em></h1>
+        <p class="hero-text">Entdecke sorgfältig ausgewählte Flaschen für lange Abende und besondere Momente.</p>
+        <a class="hero-button" href="#unsere_Produkte">Kollektion entdecken <span>↘</span></a>
+      </div>
     </header>
 
     <main>
-      <section class="container-Produkte">
-        <h1 id="unsere_Produkte">Unsere Produkte:</h1>
+      <section class="container-Produkte" id="unsere_Produkte">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Unsere Auswahl</p>
+            <h2>Vier Flaschen,<br /><em>vier Geschichten.</em></h2>
+          </div>
+          <p class="section-intro">Von irischem Blend bis schottischem Single Malt: Jeder Tropfen wurde wegen seines eigenen Charakters ausgewählt.</p>
+        </div>
         <div class="Produkte-auswahl">
-          <div class="Produkte">
-            <h2>Karaffe & Glas</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              dignissimos.
-            </p>
-            <img
-              src="./Images/succo-alcohol-1278878_1280.jpg"
-              alt="Karaffe und Glas"
-            />
-            <div class="preis-kauf">
-              <p class="Preis">Preis: 25,99 €</p>
-              <button>Kaufen</button>
-            </div>
-          </div>
-          <div class="Produkte">
-            <h2>Jameson</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              dignissimos.
-            </p>
-            <img
-              src="./Images/leppakerttu-whiskey-2942734_1280.jpg"
-              alt="Jameson Whisky Flasche"
-            />
-            <div class="preis-kauf">
-              <p class="Preis">Preis: 19,73 €</p>
-              <button>Kaufen</button>
-            </div>
-          </div>
-          <div class="Produkte">
-            <h2>Chivas Regal</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              dignissimos.
-            </p>
-            <img
-              src="./Images/nishantskul-chivas-regal-5628063_1920.jpg"
-              alt="Chivas Regal mit Tumbler"
-            />
-            <div class="preis-kauf">
-              <p class="Preis">Preis: 28,50 €</p>
-              <button>Kaufen</button>
-            </div>
-          </div>
-          <div class="Produkte">
-            <h2>Glenfiddich</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              dignissimos.
-            </p>
-            <img
-              src="./Images/thoki2025-scotch-1751294_1920.jpg"
-              alt="Glenfiddich flaschen"
-            />
-            <div class="preis-kauf">
-              <p class="Preis">Preis: 80,99 €</p>
-              <button>Kaufen</button>
-            </div>
-          </div>
+          <article class="Produkte">
+            <div class="product-image"><img src="./Images/succo-alcohol-1278878_1280.jpg" alt="Karaffe und Whiskyglas" /></div>
+            <div class="product-meta"><span>Accessoire</span><span>01</span></div>
+            <h3>Karaffe &amp; Glas</h3><p>Der stilvolle Anfang für dein persönliches Whisky-Ritual.</p>
+            <div class="preis-kauf"><p class="Preis">25,99 €</p><button type="button">In den Warenkorb <span>+</span></button></div>
+          </article>
+          <article class="Produkte">
+            <div class="product-image"><img src="./Images/leppakerttu-whiskey-2942734_1280.jpg" alt="Jameson Whisky Flasche" /></div>
+            <div class="product-meta"><span>Irish Blend</span><span>02</span></div>
+            <h3>Jameson</h3><p>Sanft, leicht würzig und angenehm rund im Abgang.</p>
+            <div class="preis-kauf"><p class="Preis">19,73 €</p><button type="button">In den Warenkorb <span>+</span></button></div>
+          </article>
+          <article class="Produkte">
+            <div class="product-image"><img src="./Images/nishantskul-chivas-regal-5628063_1920.jpg" alt="Chivas Regal mit Tumbler" /></div>
+            <div class="product-meta"><span>Blended Scotch</span><span>03</span></div>
+            <h3>Chivas Regal</h3><p>Vollmundige Frucht trifft auf weiche, malzige Wärme.</p>
+            <div class="preis-kauf"><p class="Preis">28,50 €</p><button type="button">In den Warenkorb <span>+</span></button></div>
+          </article>
+          <article class="Produkte">
+            <div class="product-image"><img src="./Images/thoki2025-scotch-1751294_1920.jpg" alt="Glenfiddich Whiskyflaschen" /></div>
+            <div class="product-meta"><span>Single Malt</span><span>04</span></div>
+            <h3>Glenfiddich</h3><p>Elegante Birne, feine Eiche und ein langer, klarer Abgang.</p>
+            <div class="preis-kauf"><p class="Preis">80,99 €</p><button type="button">In den Warenkorb <span>+</span></button></div>
+          </article>
         </div>
       </section>
       <section class="container-sonstiges" id="Sonstiges">
-        <h1>Sonstiges:</h1>
-        <hr />
         <div class="whisky-tasing">
           <div class="whisky-tasing-description">
-            <h2>Whisky Verkostung</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-              aperiam doloremque minus ex eius molestiae ducimus placeat earum
-              deserunt totam eaque optio dicta nemo in fugiat quos maiores modi,
-              repellat at voluptate. Fugiat vero amet porro quam voluptatibus
-              soluta nisi.
+            <p class="eyebrow">Das Erlebnis</p>
+            <h2>Ein Abend,<br /><em>der nachklingt.</em></h2>
+            <p class="tasting-copy">
+              Lerne die Welt des Whiskys in entspannter Atmosphäre kennen. Bei
+              unserer Verkostung begleiten wir dich durch vier besondere
+              Abfüllungen und ihre Geschichten.
             </p>
-            <br />
-            <br />
             <div class="Termine">
-              <h2>Freie Termine:</h2>
+              <h3>Freie Termine</h3>
               <div class="Termine-Liste">
                 <ul class="termine-datum">
                   <li>
@@ -191,7 +165,6 @@
             />
           </div>
         </div>
-        <hr />
       </section>
     </main>
 

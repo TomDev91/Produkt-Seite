@@ -1,240 +1,102 @@
-body {
-  background-color: beige;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap");
+
+:root {
+  --ink: #171914;
+  --ink-soft: #22251d;
+  --cream: #f2ecdf;
+  --muted: #b8b5aa;
+  --copper: #c37b4d;
+  --line: rgba(242, 236, 223, 0.18);
 }
 
-/* === Header & Navbar === */
-header {
-  max-width: 100vw;
-  height: 150px;
-  background-image: url(./Images/kalhh-whiskey-230891_1920.jpg);
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--ink); color: var(--cream); font-family: "DM Sans", sans-serif; }
+
+.site-header {
+  min-height: 680px;
+  background: linear-gradient(90deg, rgba(23, 25, 20, 0.94) 0%, rgba(23, 25, 20, 0.56) 55%, rgba(23, 25, 20, 0.2) 100%), url("./Images/kalhh-whiskey-230891_1920.jpg") center 58% / cover;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
+.navbar, .hero, main, footer { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.navbar { min-height: 88px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.brand, .navbar-link a, .hero-button, footer a { color: var(--cream); text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 12px; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.brand-mark { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid var(--copper); color: var(--copper); font-family: "Playfair Display", serif; font-size: 21px; }
+.navbar-link { display: flex; gap: 32px; }
+.navbar-link a { padding: 10px 0; color: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; transition: color 180ms ease; }
+.navbar-link a:hover, .navbar-link a:focus-visible { color: var(--copper); }
+
+.hero { padding: 145px 0 90px; }
+.eyebrow { margin: 0 0 20px; color: var(--copper); font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+.hero h1, .section-heading h2, .whisky-tasing-description h2 { margin: 0; color: var(--cream); font-family: "Playfair Display", Georgia, serif; font-size: clamp(52px, 7vw, 92px); font-weight: 500; line-height: 0.98; }
+em { color: var(--copper); font-style: italic; }
+.hero-text { max-width: 390px; margin: 28px 0 34px; color: var(--muted); font-size: 16px; line-height: 1.7; }
+.hero-button { display: inline-flex; align-items: center; gap: 24px; padding: 15px 20px; border: 1px solid var(--copper); font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; transition: background-color 180ms ease, color 180ms ease; }
+.hero-button span { color: var(--copper); font-size: 20px; line-height: 0; }
+.hero-button:hover, .hero-button:focus-visible { background: var(--copper); color: var(--ink); }
+.hero-button:hover span, .hero-button:focus-visible span { color: var(--ink); }
+
+.container-Produkte { padding: 120px 0 140px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 60px; }
+.section-heading h2, .whisky-tasing-description h2 { font-size: clamp(42px, 5vw, 66px); }
+.section-intro { max-width: 310px; margin: 0 0 4px; color: var(--muted); font-size: 15px; line-height: 1.7; }
+.Produkte-auswahl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.Produkte { min-width: 0; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.product-image { height: 320px; overflow: hidden; background: var(--ink-soft); }
+.product-image img { width: 100%; height: 100%; display: block; object-fit: cover; filter: saturate(0.82); transition: transform 400ms ease, filter 400ms ease; }
+.Produkte:hover .product-image img { filter: saturate(1); transform: scale(1.04); }
+.product-meta { display: flex; justify-content: space-between; margin: 18px 0 10px; color: var(--copper); font-size: 10px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
+.Produkte h3 { margin: 0; color: var(--cream); font-family: "Playfair Display", Georgia, serif; font-size: 26px; font-weight: 500; }
+.Produkte > p { min-height: 48px; margin: 10px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.preis-kauf { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.Preis { margin: 0; color: var(--cream); font-size: 16px; font-weight: 700; }
+.preis-kauf button { padding: 9px 0; border: 0; border-bottom: 1px solid var(--copper); background: transparent; color: var(--cream); cursor: pointer; font-family: inherit; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.preis-kauf button span { margin-left: 5px; color: var(--copper); font-size: 17px; }
+.preis-kauf button:hover, .preis-kauf button:focus-visible { color: var(--copper); }
+
+.container-sonstiges { padding: 90px 0 130px; border-top: 1px solid var(--line); }
+.whisky-tasing { display: grid; grid-template-columns: 1fr 0.85fr; align-items: center; gap: 100px; }
+.whisky-tasing-description h2 { margin-bottom: 28px; }
+.tasting-copy { max-width: 470px; color: var(--muted); font-size: 15px; line-height: 1.8; }
+.Termine { margin-top: 48px; }
+.Termine h3 { margin: 0 0 18px; color: var(--cream); font-family: "Playfair Display", Georgia, serif; font-size: 25px; font-weight: 500; }
+.Termine-Liste { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 30px; font-size: 14px; }
+.Termine-Liste ul { margin: 0; padding: 0; list-style: none; }
+.Termine-Liste li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+.Termine-Liste a { color: var(--muted); text-decoration: none; }
+.Termine-Liste a:hover, .Termine-Liste a:focus-visible { color: var(--copper); }
+.whisky-tasting-img { position: relative; }
+.whisky-tasting-img::before { position: absolute; inset: 16px -16px -16px 16px; border: 1px solid var(--copper); content: ""; z-index: -1; }
+.whisky-tasting-img img { width: 100%; max-height: 520px; display: block; object-fit: cover; }
+
+footer { display: flex; justify-content: space-between; padding: 25px 0 35px; border-top: 1px solid var(--line); }
+footer a { color: var(--muted); font-size: 12px; }
+footer a:hover { color: var(--copper); }
+.modal-content { background: var(--ink-soft); color: var(--cream); }
+.modal-header, .modal-footer { border-color: var(--line); }
+
+@media (max-width: 900px) {
+  .Produkte-auswahl { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 48px; }
+  .whisky-tasing { grid-template-columns: 1fr; gap: 60px; }
+  .whisky-tasting-img { max-width: 620px; }
 }
 
-.navbar-link {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  margin: 8px;
-}
-
-.navbar-link a:hover {
-  background-color: chocolate;
-}
-
-.navbar-link a {
-  margin-right: 16px;
-}
-
-.navbar h1,
-.navbar a {
-  font-size: 32px;
-  color: beige;
-}
-
-/* === Main (Produkte) === */
-
-main {
-  max-width: 100vw;
-  margin: 8px;
-}
-
-main h1,
-main h2 {
-  color: chocolate;
-  font-family: "Times New Roman", Times, serif;
-}
-
-main p:hover {
-  background-color: chocolate;
-  transition: 2s;
-}
-
-.Produkte-auswahl {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  padding: 10px;
-}
-
-.Produkte {
-  width: 350px;
-  margin: 50px;
-}
-
-.Produkte p {
-  background-color: grey;
-  color: beige;
-  padding: 10px;
-}
-
-.Produkte img {
-  width: 350px;
-}
-
-.Preis {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: grey;
-  color: beige;
-  width: fit-content;
-  font-weight: bold;
-}
-
-.Preis:hover {
-  background-color: chocolate;
-  color: beige;
-  transition: 2s;
-}
-
-.preis-kauf {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: baseline;
-}
-
-.preis-kauf button {
-  margin-left: 16px;
-  padding: 10px;
-  height: fit-content;
-  border-radius: 8px;
-  border: none;
-  background-color: grey;
-  color: beige;
-}
-
-.preis-kauf button:hover {
-  background-color: chocolate;
-  transition: 2s;
-}
-
-/* === Sonstiges === */
-
-.container-sonstiges {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 200px;
-}
-
-.container-sonstiges h1 {
-  padding: 10px;
-  margin: 10px;
-}
-
-.container-sonstiges hr {
-  height: 3px;
-  background-color: black;
-}
-
-.whisky-tasing {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 50px;
-}
-
-.whisky-tasing-description {
-  display: inline;
-  max-width: 35vw;
-}
-
-.whisky-tasing-description p {
-  background-color: grey;
-  color: beige;
-}
-
-.whisky-tasting-img img {
-  width: 350px;
-  height: auto;
-  margin-inline-start: 200px;
-}
-
-.whisky-tasing-description ul {
-  background-color: grey;
-  color: beige;
-  width: max-content;
-  padding: 5px;
-  list-style-type: none;
-}
-
-.Termine-Liste {
-  display: flex;
-  flex-direction: row;
-  font-size: 24px;
-}
-
-.Termine-Liste a {
-  color: beige;
-}
-
-/* === Footer === */
-
-footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-
-footer a {
-  color: black;
-  margin: 10px;
-  font-size: 16px;
-}
-
-/* === Responsiv Section === */
-
-@media (min-width: 1850px) {
-  .Produkte-auswahl {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 10px;
-  }
-}
-
-@media (max-width: 1749px) {
-  .Produkte-auswahl {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 10px;
-  }
-}
-
-@media(max-width:1020px){
-  .whisky-tasting-img img{
-    margin-inline-start: 20px;
-  }
-}
-
-@media(max-width:750px){
-  .whisky-tasting-img img{
-    margin-inline-start: 0px;
-  }
-}
-
-@media(max-width:500px){
-  .navbar h1,
-  .navbar a{
-    font-size: 150%;
-  }
+@media (max-width: 560px) {
+  .navbar, .hero, main, footer { width: calc(100% - 32px); }
+  .site-header { min-height: 620px; }
+  .navbar { min-height: 76px; align-items: flex-start; padding-top: 20px; }
+  .brand { font-size: 13px; }
+  .navbar-link { flex-direction: column; align-items: flex-end; gap: 2px; }
+  .navbar-link a { padding: 3px 0; font-size: 10px; }
+  .hero { padding-top: 120px; }
+  .section-heading { display: block; margin-bottom: 42px; }
+  .section-intro { margin-top: 24px; }
+  .container-Produkte { padding: 80px 0 95px; }
+  .Produkte-auswahl { grid-template-columns: 1fr; }
+  .product-image { height: 360px; }
+  .whisky-tasing { gap: 45px; }
+  .container-sonstiges { padding: 75px 0 90px; }
+  .Termine-Liste { gap: 8px 15px; }
+  .whisky-tasting-img::before { inset: 10px -10px -10px 10px; }
 }
